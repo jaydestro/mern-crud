@@ -5,11 +5,10 @@ metadata:
     labels:
         app: "jayaksdemo-efc2"
 spec:
-    type: ClusterIP
+    type: LoadBalancer
     ports:
-    - port: 3000
+    - port: 80
       targetPort: 3000
       protocol: TCP
-      name: http
     selector:
         app: "jayaksdemo-efc2"
